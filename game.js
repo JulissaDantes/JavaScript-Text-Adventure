@@ -220,7 +220,7 @@ const textNodes = [
   },
   {
     id: 14,
-    text: 'Hola querido mio, veo que haz violado el protocolo impuesto por Aragonia, permiteme presentarme, me llamo Ether. Te lodigo desde ahora, no ppuedes confiar en esa pequeña demonia, y no lo digo porque odio a los niños, esa tiene un lugar especial en el infierno.',
+    text: 'Hola querido mio, veo que haz violado el protocolo impuesto por Aragonia, permiteme presentarme, me llamo Ether. Te lo digo desde ahora, no puedes confiar en esa pequeña demonia, y no lo digo porque odio a los niños, esa tiene un lugar especial en el infierno.',
     options: [
       {
         text: 'Siguiente',
