@@ -17,7 +17,7 @@ function showTextNode(textNodeIndex) {
 
   textNode.options.forEach(option => {
     if (showOption(option)) {
-      const button = document.createElement('button')
+      const button = document.createElement('button') 
       button.innerText = option.text
       button.classList.add('btn')
       button.addEventListener('click', () => selectOption(option))
@@ -42,137 +42,141 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'You wake up in a strange place and you see a jar of blue goo near you.',
+    text: 'Hola CTO Luis, lamento informarte que te encuentras encerrado en una casa antigua, y los unicos que te pueden ayudar son los espiritus que allí reposan, como yo. Mi nobre es Aragonia, solia ser la niña que vivia aquí antes de el gran cataclismo y ahora me dedico a tratar de evitar llenar la casa de espiritus, en pocas palabras evitar que se muera otro. \n Selecciona una de las dos opciones para proceder',
     options: [
       {
-        text: 'Take the goo',
-        setState: { blueGoo: true },
+        text: 'OK ayudame',
         nextText: 2
       },
       {
-        text: 'Leave the goo',
-        nextText: 2
+        text: 'Matame mejor',
+        nextText: 12
       }
     ]
   },
   {
     id: 2,
-    text: 'You venture forth in search of answers to where you are when you come across a merchant.',
+    text: 'Primera recomendación, ve a hablar con el montro de la cocina',
     options: [
       {
-        text: 'Trade the goo for a sword',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, sword: true },
+        text: 'Ir a la cocina',
         nextText: 3
       },
       {
-        text: 'Trade the goo for a shield',
-        requiredState: (currentState) => currentState.blueGoo,
-        setState: { blueGoo: false, shield: true },
-        nextText: 3
+        text: 'Ir a la habitación',
+        nextText: 11
       },
       {
-        text: 'Ignore the merchant',
-        nextText: 3
+        text: 'Si hay que hablar con gente, matame mejor',
+        nextText: 12
       }
     ]
   },
   {
     id: 3,
-    text: 'After leaving the merchant you start to feel tired and stumble upon a small town next to a dangerous looking castle.',
+    text: 'Hola soy el montro de la cocina, super dominicano ontobul, con la pámpara prendía, y trucho to lo día, ya yo me sé la cotorra de Aragonia, así que para ayudarte debes responder correctamente el siguiente acertijo \n Ajem! ¿Cómo se llama la canción que dice -Date duro hata que la nari se te desabotone-?',
     options: [
       {
-        text: 'Explore the castle',
+        text: 'Pana Juda',
+        nextText: 13
+      },
+      {
+        text: 'Palomo en lata',
         nextText: 4
       },
       {
-        text: 'Find a room to sleep at in the town',
-        nextText: 5
-      },
-      {
-        text: 'Find some hay in a stable to sleep in',
-        nextText: 6
+        text: 'Delincuente en mi party',
+        nextText: 13
       }
     ]
   },
   {
     id: 4,
-    text: 'You are so tired that you fall asleep while exploring the castle and are killed by some terrible monster in your sleep.',
+    text: 'Wow, pocas personas pasan el test del montro, debes ser un ser humano exepcional, pero no te dijo ninguna pista de como salir, eso fue raro, mira a ver si el fantasma del balcon te puede ayudar mejor',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Ir al balcon',
+        nextText: 5
+      },
+      {
+        text: 'Ir a la habitación mejor',
+        nextText: 11
+      },
+      {
+        text: 'Tu no sirves de nada Argonia, matame mejor',
+        nextText: 12
       }
     ]
   },
   {
     id: 5,
-    text: 'Without any money to buy a room you break into the nearest inn and fall asleep. After a few hours of sleep the owner of the inn finds you and has the town guard lock you in a cell.',
+    text: 'Hola soy Madame La Marche, conocida por mis incansables hazañas en la guerra de la revolución francesa en 1789, solo ayudare a aquellos que sean suficientemente cultos así que responde lo siguiente chiquillo: A qué casa real perteneció tu tocayo Luis XVI',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Borbon',
+        nextText: 6
+      },
+      {
+        text: 'Ardenas',
+        nextText: 13
+      },
+      {
+        text: 'Valois',
+        nextText: 13
       }
     ]
   },
   {
     id: 6,
-    text: 'You wake up well rested and full of energy ready to explore the nearby castle.',
+    text: 'Interesante, pareces ser conocedor de los conocimientos importantes, he decidido ayudarte. Primer consejo: No confies en los espiritus de las habitaciones, y segundo, Aragonia llévalo al sótano, para que pueda salir de su suplicio',
     options: [
       {
-        text: 'Explore the castle',
+        text: 'Seguir a Aragonia al sótano',
         nextText: 7
+      },
+      {
+        text: 'Ir a la habitación de al lado',
+        nextText: 1
+      },
+      {
+        text: 'Cuanto fucking viajes son que hay que dar, voy a quemar la casa mejor',
+        nextText: 12
       }
     ]
   },
   {
     id: 7,
-    text: 'While exploring the castle you come across a horrible monster in your path.',
+    text: '"Haz llegado al sótano y se voltea una niña que estaba sentada en un banquito, acto seguido se cierra la puerta detras de ti" Hola CTO Luis! No te asustes, soy Aragonia, realmente nunca morí, oias mi voz porque tengo un sistema de sonido bien conectado en está casa, y los espiritus que viste no eran más que hologramas.\n Pero si algo es cierto, es quue estas atrapado aquí conmigo, y yo tengo un problema con personas que pretenden cambiar al mundo',
     options: [
       {
-        text: 'Try to run',
+        text: 'Siguiente',
         nextText: 8
-      },
-      {
-        text: 'Attack it with your sword',
-        requiredState: (currentState) => currentState.sword,
-        nextText: 9
-      },
-      {
-        text: 'Hide behind your shield',
-        requiredState: (currentState) => currentState.shield,
-        nextText: 10
-      },
-      {
-        text: 'Throw the blue goo at it',
-        requiredState: (currentState) => currentState.blueGoo,
-        nextText: 11
       }
     ]
   },
   {
     id: 8,
-    text: 'Your attempts to run are in vain and the monster easily catches.',
+    text: 'Mis padres son parte de una pequeña conspiración para poder gobernar sobre el mundo entero, pero para lograr su cometido necesitan una ayuda que yo puedo proveer, y por eso me he dado la tarea de...',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Siguiente',
+        nextText: 9
       }
     ]
   },
   {
     id: 9,
-    text: 'You foolishly thought this monster could be slain with a single sword.',
+    text: 'Acabar con toda la gente inteligente del mundo, como tu. No es nada personal pero se acerca San Valentin y no podría ofrecerles yo mejor regalo que acabar contigo',
     options: [
       {
-        text: 'Restart',
-        nextText: -1
+        text: 'Siguiente',
+        nextText: 10
       }
     ]
   },
   {
     id: 10,
-    text: 'The monster laughed as you hid behind your shield and ate you.',
+    text: 'You dead boi',
     options: [
       {
         text: 'Restart',
@@ -182,10 +186,265 @@ const textNodes = [
   },
   {
     id: 11,
-    text: 'You threw your jar of goo at the monster and it exploded. After the dust settled you saw the monster was destroyed. Seeing your victory you decide to claim this castle as your and live out the rest of your days there.',
+    text: 'No te recomiendo entrar a las habitaciones, los peores espíritus se alojan ahí, siempre llevan a las almas a su perdición porque buscan compañía, y no puedo acompañarte ahí dentro',
     options: [
       {
-        text: 'Congratulations. Play Again.',
+        text: 'Continuar a la habitación',
+        nextText: 14
+      },
+      {
+        text: 'Continuar a la cocina',
+        nextText: 3
+      }
+    ]
+  },
+  {
+    id: 12,
+    text: 'A po ta bien, no haga na, bendito vago',
+    options: [
+      {
+        text: 'Restart',
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 13,
+    text: 'Tu no sabe na, muerto',
+    options: [
+      {
+        text: 'Restart',
+        nextText: -1
+      }
+    ]
+  },
+  {
+    id: 14,
+    text: 'Hola querido mio, veo que haz violado el protocolo impuesto por Aragonia, permiteme presentarme, me llamo Ether. Te lodigo desde ahora, no ppuedes confiar en esa pequeña demonia, y no lo digo porque odio a los niños, esa tiene un lugar especial en el infierno.',
+    options: [
+      {
+        text: 'Siguiente',
+        nextText: 15
+      }
+    ]
+  },
+  {
+    id: 15,
+    text: 'Si en realidad mereces que salve y perdone tu alma debo comprobar tu valor. Responde lo siguiente por favor: ¿Cómo Pocket beneficia a los nodos participantes?',
+    options: [
+      {
+        text: 'Acciones de la compañia proporcionales a su desempeño',
+        nextText: 13
+      },
+      {
+        text: 'Dinero en efectivo',
+        nextText: 13
+      },
+      {
+        text: 'tokens criptográficos nativos POKT',
+        nextText: 16
+      }
+    ]
+  },
+  {
+    id: 16,
+    text: 'Muy fácil ¿no crees? Pues estamos solo comenzando, responde esta otra: ¿En palabras de Michael ORourke qué pasara en el futuro gracias a POCKET? ',
+    options: [
+      {
+        text: 'Habran miles de protocolos cerrados governando nuestras vidas',
+        nextText: 13
+      },
+      {
+        text: 'Tendremos servidores en casa accediendo a la colección de librerias que te permitan interactuar con un nodo remoto o local de Ethereum como si fuera un router de wifi',
+        nextText: 17
+      },
+      {
+        text: 'Se empoderaran los developers por poder conectar sus aplicaciones con la antigua generación de la web',
+        nextText: 13
+      }
+    ]
+  },
+  {
+    id: 17,
+    text: 'Entonces sí parece que estarás atento, te ayudaré, ve al baño, Aragonia sí puede entrar al baño así que Ramiro, el fantasma del baño, tratara de ayudarte de forma encriptada, buena suerte',
+    options: [
+      {
+        text: 'Salir de la habitación',
+        nextText: 18
+      }
+    ]
+  },
+  {
+    id: 18,
+    text: 'Uff saliste vivo, tuviste suerte, ahora vamos a la cocina como teníamos planeado',
+    options: [
+      {
+        text: 'Ir a la cocina',
+        nextText: 19
+      },
+      {
+        text: 'Ir al baño',
+        nextText: 20
+      }
+    ]
+  },
+  {
+    id: 19,
+    text: 'Hola soy el montro de la cocina, suerte que ignoraste la loca de la habitación, siempre confunde a lo greti, super dominicano ontobul, con la pámpara prendía, y trucho to lo día, ya yo me sé la cotorra de Aragonia, así que para ayudarte debes responder correctamente el siguiente acertijo \n Ajem! ¿Cómo se llama la canción que dice -Date duro hata que la nari se te desabotone-?',
+    options: [
+      {
+        text: 'Pana Juda',
+        nextText: 13
+      },
+      {
+        text: 'Palomo en lata',
+        nextText: 4
+      },
+      {
+        text: 'Delincuente en mi party',
+        nextText: 13
+      }
+    ]
+  },
+  {
+    id: 20,
+    text: 'Hola Luis mi nombre es Ramiro y tengo una obsesión con el valor de un char, a veces sumaba los valores de las palabra y me inventaba fechas de cumpleaños, ¿te imagina que pudiéramos comunicarnos sin realmente pronunciar las palabras?. En fin sé cómo funcionan los demás fantasmas y no quiero desafinar así que te hare una pregunta: ¿Cuándo es el cumpleaños de Julissa?',
+    options: [
+      {
+        text: '15 de Julio',
+        nextText: 13
+      },
+      {
+        text: '22 de Junio',
+        nextText: 13
+      }
+      ,
+      {
+        text: '18 de Julio',
+        nextText: 21
+      }
+    ]
+  },
+  {
+    id: 21,
+    text: 'Excelentemente bien!! Oye déjame darte unas palabras a lo loco: ehx, en fin esa fue mi palabra, para salir de aquí solo debes encontrar la combinación de números que abre la puerta. En la oficina me parece que hay alguien que sabe los últimos 3 dígitos. ',
+    options: [
+      {
+        text: 'Ir al balcon ',
+        nextText: 5
+      },
+      {
+        text: 'Ir a la oficina',
+        nextText: 22
+      },
+      {
+        text: 'Ir a la cocina',
+        nextText: 3
+      }
+    ]
+  },
+  {
+    id: 22,
+    text: 'Oye CTO Luis no creo que seguir los consejos de Ramiro sea buena idea, habla muy extraño',
+    options: [
+      {
+        text: 'Pero matame ya y deja de opinar tanto',
+        nextText: 12
+      },
+      {
+        text: 'Tienes razon Argonia, vamos al balcon mejor, no puedo confiar en alguien que hable tan raro',
+        nextText: 5
+      },
+      {
+        text: 'Ir a la oficina como quiera',
+        nextText: 23
+      }
+    ]
+  },
+  {
+    id: 23,
+    text: 'Bienvenido a la oficina mi querido CTO, me llamo Pabel. Si llegaste aquí es porque Ramiro te mando, es el único fantasma que sabe que estoy aquí y si te mando ya sé lo que quiere que te dé, pero tengo mucho sin saber de Ramiro así que tengo que probar tu valor.',
+    options: [
+      {
+        text: 'Siguiente',
+        nextText: 24
+      }
+    ]
+  },
+  {
+    id: 24,
+    text: 'Así que respóndeme la siguiente pregunta por favor: ¿Dónde comenzó todo?',
+    options: [
+      {
+        text: 'En una noche de invierno',
+        nextText: 13
+      },
+      {
+        text: 'En una noche de primavera',
+        nextText: 13
+      },
+      {
+        text: 'En una noche de verano',
+        nextText: 25
+      },
+      {
+        text: 'En un día de otoño',
+        nextText: 13
+      }
+    ]
+  },
+  {
+    id: 25,
+    text: 'Interesante, debes saber que tanto yo como Ramiro estamos admirados por las transformaciones de valor, te diré algo y presta atención: zfi, eso será suficiente, ve a la puerta principal y coloca el código que te hemos dado.',
+    options: [
+      {
+        text: 'Ir a la puerta',
+        nextText: 26
+      },
+      {
+        text: 'Ir al balcon porque estos 2 fantasmas solo me hicieron perder el tiempo',
+        nextText: 5
+      }
+    ]
+  },
+  {
+    id: 26,
+    text: 'Luis yo no entendí por qué has venido a la puerta si el código es numérico y los fantasmas no te han dado números vamos al balcón mejor, he visto esos fantasmas mandar a las almas de aquí a su perdición. Hazme caso ',
+    options: [
+      {
+        text: 'Yo me sé el codigo y lo pondré ahora',
+        nextText: 27
+      },
+      {
+        text: 'Tienes razón, vamos al balcon',
+        nextText: 5
+      }
+    ]
+  },
+  {
+    id: 27,
+    text: 'Ingrese el código',
+    options: [
+      {
+        text: '104-102-105-120-122-102',
+        nextText: 10
+      },
+      {
+        text: '101-122-120-104-102-105',
+        nextText: 10
+      },
+      {
+        text: '101-104-120-122-102-105',
+        nextText: 28
+      }
+    ]
+  },
+  {
+    id: 28,
+    text: 'FELICIDADESSSSSSS LOGRASTE ESCAPAR DE ESA TERRIBLE TRAMPA MORTAL, ERES EL MEJOR DE TODOS LOS TIEMPOS \n !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
+    options: [
+      {
+        text: 'Restart',
         nextText: -1
       }
     ]
