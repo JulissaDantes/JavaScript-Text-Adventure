@@ -42,14 +42,14 @@ function selectOption(option) {
 const textNodes = [
   {
     id: 1,
-    text: 'Hola CTO Luis, lamento informarte que te encuentras encerrado en una casa antigua, y los unicos que te pueden ayudar son los espiritus que allí reposan, como yo. Mi nobre es Aragonia, solia ser la niña que vivia aquí antes de el gran cataclismo y ahora me dedico a tratar de evitar llenar la casa de espiritus, en pocas palabras evitar que se muera otro. \n Selecciona una de las dos opciones para proceder',
+    text: 'Hola CTO Luis, lamento informarte que te encuentras encerrado en una casa antigua, y los únicos que te pueden ayudar son los espíritus que allí reposan, como yo. Mi nombre es Aragonia, solia ser la niña que vivia aquí antes de el gran cataclismo y ahora me dedico a tratar de evitar llenar la casa de espiritus, en pocas palabras evitar que se muera otro. \n Selecciona una de las dos opciones para proceder',
     options: [
       {
-        text: 'OK ayudame',
+        text: 'OK ayúdame',
         nextText: 2
       },
       {
-        text: 'Matame mejor',
+        text: 'Mátame mejor',
         nextText: 12
       }
     ]
