@@ -251,7 +251,7 @@ const textNodes = [
     text: 'Muy fácil ¿no crees? Pues estamos solo comenzando, responde esta otra: ¿En palabras de Michael ORourke qué pasara en el futuro gracias a POCKET? ',
     options: [
       {
-        text: 'Habran miles de protocolos cerrados governando nuestras vidas',
+        text: 'Habran miles de protocolos cerrados gobernando nuestras vidas',
         nextText: 13
       },
       {
