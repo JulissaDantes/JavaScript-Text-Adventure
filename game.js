@@ -146,7 +146,7 @@ const textNodes = [
   },
   {
     id: 7,
-    text: '"Haz llegado al sótano y se voltea una niña que estaba sentada en un banquito, acto seguido se cierra la puerta detras de ti" Hola CTO Luis! No te asustes, soy Aragonia, realmente nunca morí, oias mi voz porque tengo un sistema de sonido bien conectado en está casa, y los espiritus que viste no eran más que hologramas.\n Pero si algo es cierto, es quue estas atrapado aquí conmigo, y yo tengo un problema con personas que pretenden cambiar al mundo',
+    text: '"Haz llegado al sótano y se voltea una niña que estaba sentada en un banquito, acto seguido se cierra la puerta detras de ti" Hola CTO Luis! No te asustes, soy Aragonia, realmente nunca morí, oías mi voz porque tengo un sistema de sonido bien conectado en está casa, y los espíritus que viste no eran más que hologramas.\n Pero si algo es cierto, es que estas atrapado aquí conmigo, y yo tengo un problema con personas que pretenden cambiar al mundo',
     options: [
       {
         text: 'Siguiente',
@@ -166,7 +166,7 @@ const textNodes = [
   },
   {
     id: 9,
-    text: 'Acabar con toda la gente inteligente del mundo, como tu. No es nada personal pero se acerca San Valentin y no podría ofrecerles yo mejor regalo que acabar contigo',
+    text: 'Acabar con toda la gente inteligente del mundo, como tú. No es nada personal pero se acerca San Valentín y no podría ofrecerles yo mejor regalo que acabar contigo',
     options: [
       {
         text: 'Siguiente',
@@ -220,7 +220,7 @@ const textNodes = [
   },
   {
     id: 14,
-    text: 'Hola querido mio, veo que haz violado el protocolo impuesto por Aragonia, permiteme presentarme, me llamo Ether. Te lo digo desde ahora, no puedes confiar en esa pequeña demonia, y no lo digo porque odio a los niños, esa tiene un lugar especial en el infierno.',
+    text: 'Hola querido mio, veo que has violado el protocolo impuesto por Aragonia, permiteme presentarme, me llamo Ether. Te lo digo desde ahora, no puedes confiar en esa pequeña demonia, y no lo digo porque odio a los niños, esa tiene un lugar especial en el infierno.',
     options: [
       {
         text: 'Siguiente',
