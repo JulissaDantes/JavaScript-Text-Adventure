@@ -308,7 +308,7 @@ const textNodes = [
   },
   {
     id: 20,
-    text: 'Hola Luis mi nombre es Ramiro y tengo una obsesión con el valor de un char, a veces sumaba los valores de las palabra y me inventaba fechas de cumpleaños, ¿te imagina que pudiéramos comunicarnos sin realmente pronunciar las palabras?. En fin sé cómo funcionan los demás fantasmas y no quiero desafinar así que te hare una pregunta: ¿Cuándo es el cumpleaños de Julissa?',
+    text: 'Hola Luis mi nombre es Ramiro y tengo una obsesión con el valor de un char, a veces sumaba los valores de las palabras y me inventaba fechas de cumpleaños, ¿te imaginas que pudiéramos comunicarnos sin realmente pronunciar las palabras?. En fin sé cómo funcionan los demás fantasmas y no quiero desafinar así que te hare una pregunta: ¿Cuándo es el cumpleaños de Julissa?',
     options: [
       {
         text: '15 de Julio',
@@ -327,7 +327,7 @@ const textNodes = [
   },
   {
     id: 21,
-    text: 'Excelentemente bien!! Oye déjame darte unas palabras a lo loco: ehx, en fin esa fue mi palabra, para salir de aquí solo debes encontrar la combinación de números que abre la puerta. En la oficina me parece que hay alguien que sabe los últimos 3 dígitos. ',
+    text: 'Excelentemente bien!! Oye déjame darte unas palabras a lo loco: ehx, en fin esa fue mi palabra, para salir de aquí sólo debes encontrar la combinación de números que abre la puerta. En la oficina me parece que hay alguien que sabe los últimos 3 dígitos. ',
     options: [
       {
         text: 'Ir al balcon ',
@@ -363,7 +363,7 @@ const textNodes = [
   },
   {
     id: 23,
-    text: 'Bienvenido a la oficina mi querido CTO, me llamo Pabel. Si llegaste aquí es porque Ramiro te mando, es el único fantasma que sabe que estoy aquí y si te mando ya sé lo que quiere que te dé, pero tengo mucho sin saber de Ramiro así que tengo que probar tu valor.',
+    text: 'Bienvenido a la oficina mi querido CTO, me llamo Pabel. Si llegaste aquí es porque Ramiro te mando, es el único fantasma que sabe que estoy aquí y si te mandó ya sé lo que quiere que te dé, pero tengo mucho sin saber de Ramiro así que tengo que probar tu valor.',
     options: [
       {
         text: 'Siguiente',
