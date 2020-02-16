@@ -67,7 +67,7 @@ const textNodes = [
         nextText: 11
       },
       {
-        text: 'Si hay que hablar con gente, matame mejor',
+        text: 'Si hay que hablar con gente, mátame mejor',
         nextText: 12
       }
     ]
